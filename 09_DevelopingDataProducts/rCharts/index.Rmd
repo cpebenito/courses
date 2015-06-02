@@ -44,10 +44,14 @@ runif(1)
 
 ---
 ## Example
-```
-require(rCharts)
+
+```r
+
+require(devtools)
+install_github('ramnathv/rCharts')
+
 haireye = as.data.frame(HairEyeColor)
-n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
+n1 <- rPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
   data = subset(haireye, Sex == 'Male')
 )
 n1$save('fig/n1.html', cdn = TRUE)
